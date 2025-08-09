@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="forgot_pw.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Form Section -->
+  <div class="form-section">
+    <div class="form-card">
+      <h2>Forgot Password</h2>
+      <p class="subtext">Enter your email to reset your password</p>
+
+      <div class="input-wrapper">
+        <input type="email" class="input-box" placeholder="Enter your email" id="forgotEmail">
+      </div>
+
+      <button class="btn blue">
+        <span class="btn-text">Send Reset Link</span>
+      </button>
+
+      <button class="btn white" onclick="window.location.href='index.html'">
+        <span class="btn-text">Back to Login</span>
+      </button>
+
+      <div class="account">
+        Remember your password? <a href="index.html">Sign in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Section -->
+  <div class="image-section">
+    <div class="image-card">
+      <img src="forgot.jpg" alt="Forgot password">
+    </div>
+  </div>
+</div>
+ <script src="forgot.js"></script>
+</body>
+</html>

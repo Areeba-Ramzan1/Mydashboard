@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <h2>Login to Dashboard</h2>
+      <p class="subtext">Please Login To Continue To Your Account.</p>
+      
+      <div class="input-wrapper">
+        <input type="email" class="input-box" placeholder="Email" id="loginEmail">
+      </div>
+      
+      <div class="input-wrapper">
+        <input type="password" class="input-box" placeholder="Password" id="loginPassword">
+      </div>
+      
+      <div class="forgot" onclick="showScreen('forgotScreen')">Forgot password?</div>
+      
+      <button class="btn blue" onclick="login()">
+        <span class="btn-text">Sign In</span>
+      </button>
+      
+      <div class="account">Don't have an account? <a onclick="showScreen('registerScreen')" href="signup.html">Sign up</a></div>
+      
+      <button class="btn white">
+        <span class="btn-text">Continue with Google</span>
+        <i class="fab fa-google google-icon"></i>
+      </button>
+    </div>
+    
+    <div class="image-box">
+      <div class="image-card">
+        <img src="login.jpg" alt="Login Illustration" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

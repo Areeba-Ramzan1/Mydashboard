@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.image-card {
+  width: 100%;
+  height: 500px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 10px;
+  border: 2px solid #1a1a1a;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  margin-bottom: 30px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.input-box::placeholder {
+  color: #777;
+}
+
+.btn {
+  width: 60%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  background-color: #0066ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-text {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.account {
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 15px;
+  width: 60%;
+}
+
+.account a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.account:hover {
+  color: #0066ff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .profile-card {
+    padding: 30px 20px;
+  }
+
+  .image-box {
+    padding: 20px;
+  }
+
+  .image-card {
+    height: 300px;
+  }
+
+  .input-wrapper,
+  .btn,
+  .account {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
