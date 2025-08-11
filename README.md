@@ -21,7 +21,7 @@ This is a responsive,modern dashboard with the following screens:
 
 ## 🌐 Live Demo
 
-👉 [Click Here to View the Deployed Site](https://static-web-app-w81h.vercel.app/)
+👉 [Click Here to View the Deployed Site](mydashboard-57soahqkw-areebas-projects-509f19a9.vercel.app)
 
 ---
 
@@ -69,8 +69,8 @@ dashboard/# Root folder of project
 ## 🚀 Deployment Info
 
 - ***Hosted on Vercel***
-- ***Repo:*** [GitHub - Dashboard](https://github.com/Areeba-Ramzan1/Dashboard/tree/main/dashboard)
-- ***Live Link:*** [View Website](https://static-web-app-w81h.vercel.app/)
+- ***Repo:*** [GitHub - Dashboard](https://github.com/Areeba-Ramzan1/Mydashboard)
+- ***Live Link:*** [View Website](mydashboard-57soahqkw-areebas-projects-509f19a9.vercel.app)
 
 ---
 
