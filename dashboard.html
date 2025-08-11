@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Dashboard Left Content -->
+    <div class="login-card">
+      <div class="dashboard-avatar" style="margin-bottom: 20px;">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+          <circle cx="30" cy="30" r="30" fill="#6dd5ed"/>
+          <text x="50%" y="54%" text-anchor="middle" fill="#fff" font-size="28" font-family="Arial" dy=".3em" id="avatarText">AR</text>
+        </svg>
+      </div>
+
+      <h2 id="welcomeMsg">Welcome, User!</h2>
+      <p id="userEmail" class="subtext">user@example.com</p>
+      <p id="userPhone" class="subtext">Phone no: Not available</p>
+
+      <p class="subtext" style="margin-top: 10px;">
+        "Security is not a product, but a process. Stay vigilant and keep your data safe."
+      </p>
+
+      <div style="margin-top: 30px; width: 100%;">
+        <button class="btn blue" onclick="goToPage('change_pw.html')">
+          <span class="btn-text">🔐 Change Password</span>
+        </button>
+
+        <button class="btn blue" onclick="goToPage('profile_set.html')" style="margin-top: 10px;">
+          <span class="btn-text">👤 Profile Settings</span>
+        </button>
+
+        <button class="btn white" onclick="logout()" style="margin-top: 10px;">
+          <span class="btn-text">🚪 Log Out</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dashboard Right Image -->
+    <div class="image-box">
+      <div class="image-card">
+        <img src="images/db.jpg" alt="Dashboard Illustration" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Your dashboard JS file -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

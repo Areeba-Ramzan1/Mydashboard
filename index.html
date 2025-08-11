@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <h2>Login to Dashboard</h2>
+      <p class="subtext">Please Login To Continue To Your Account.</p>
+      
+      <div class="input-wrapper">
+        <input type="email" class="input-box" placeholder="Email" id="loginEmail" />
+      </div>
+      
+      <div class="input-wrapper">
+        <input type="password" class="input-box" placeholder="Password" id="loginPassword" />
+        <i class="fa-solid fa-eye icon inside-input" id="togglePassword"></i>
+      </div>
+      
+   <div class="forgot" onclick="window.location.href='forgot_pw.html'">Forgot password?</div>
+      
+      <button id="loginBtn" class="btn blue">
+        <span class="btn-text">Sign In</span>
+      </button>
+  
+      <div class="account">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </div>
+      
+      <button id="googleLoginBtn" class="btn white" style="margin-top: 15px;">
+        <span class="btn-text">Continue with Google</span>
+        <i class="fab fa-google google-icon"></i>
+      </button>
+    </div>
+    
+    <div class="image-box">
+      <div class="image-card">
+        <img src="images/login.jpg" alt="Login Illustration" />
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Module script linked here -->
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
