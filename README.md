@@ -40,18 +40,21 @@ dashboard/# Root folder of project
 │
 
 ├── js/ # All JavaScript files
-│ ├── script.js # JS for Login/Index and Dashboard page
-│ ├── signup.js # JS for Signup page
-│ └── forgot.js # JS for Forgot password page
+│ ├── script.js         # JS for Login/Index page
+│ ├── dashboard.js      # JS for Dashboard page
+│ ├── change_pw.js      # JS for Change password page
+│ ├── profile_set.js    # JS for Profile settings page
+│ ├── signup.js         # JS for Signup page
+│ └── forgot_pw.js      # JS for Forgot password page
 │
 
-├── images/      # Images used in the project
-│ └── db.jpg     # Image used in dashboard page
-│ ├── forgot.jpg # Image used in forgot page
-│ ├── login.jpg  # Image used in login/index page
-│ ├── reset.jpg  # Image used in reset password page
-│ └── signup.jpg # Image used in signup page
-│ └── profile.jpg # Image used in profile page
+├── images/             # Images used in the project
+│ └── db.jpg            # Image used in dashboard page
+│ ├── forgot.jpg        # Image used in forgot page
+│ ├── login.jpg         # Image used in login/index page
+│ ├── reset.jpg         # Image used in reset password page
+│ └── signup.jpg        # Image used in signup page
+│ └── profile.jpg       # Image used in profile page
 │
 
 ├── index.html             # Login Page
@@ -59,7 +62,7 @@ dashboard/# Root folder of project
 ├── forgot_pw.html         # Forgot Password Page
 ├── change_pw.html         # Change Password Page
 ├── dashboard.html         # Dashboard (post-login)
-├── profile.html           # Profile Settings Page
+├── profile_set.html       # Profile Settings Page
 
 ---
 
@@ -71,13 +74,13 @@ dashboard/# Root folder of project
 
 ---
 
-## Setup
-1. Clone repo
-2. Open `index.html` in browser
-3. Update API URL in `js/login.js`
-
 ## Authentication Flow
-- User logs in → API returns JWT token → Token stored in localStorage → Decoded on welcome page.
+User signs up → Authentication system creates account
+User logs in → Session is created and managed automatically
+Password reset option allows user to recover access
+User can change password securely
+User updates profile information anytime
+
 
 ## Test
 Use:
