@@ -118,5 +118,5 @@ GitHub: [https://github.com/Areeba-Ramzan1]
 
 ## 📝 Notes
 
-* **Frontend-only** project; ready to swap Firebase with an **external auth API** later if required (same UI, just replace API calls).
+* Frontend-only project; ready to swap Firebase with an **external auth API** later if required (same UI, just replace API calls).
 * Responsive layouts validated on desktop & mobile.
