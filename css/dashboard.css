@@ -90,7 +90,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* kam padding for bigger image */
+  padding: 10px; 
 }
 
 .image-card {

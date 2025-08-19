@@ -13,13 +13,13 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-// Email validation
+// Email validation :
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-// Password validation
+// Password validation :
 function isValidPassword(password) {
   const minLength = password.length >= 8;
   const upperCase = /[A-Z]/.test(password);
@@ -28,12 +28,12 @@ function isValidPassword(password) {
   return minLength && upperCase && lowerCase && specialChar;
 }
 
-// Popup/alert
+// Popup/alert :
 function showPopup(message) {
   alert(message);
 }
 
-// Signup function
+// Signup function :
 async function signup() {
   const name = document.querySelector('input[placeholder="Full Name"]').value.trim();
   const email = document.querySelector('input[placeholder="Email"]').value.trim();
@@ -77,7 +77,7 @@ async function signup() {
   }
 }
 
-// Google Sign-In
+// Google Sign-In :
 async function googleSignIn() {
   const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -97,12 +97,12 @@ async function googleSignIn() {
   }
 }
 
-// Event listeners
+// Event listeners :
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".btn.blue").addEventListener("click", signup);
   document.querySelector(".btn.white").addEventListener("click", googleSignIn);
 
-  // Password Eye Toggle
+  // Password Eye Toggle :
   const toggleIcons = document.querySelectorAll(".togglePassword"); // class use karna better
   toggleIcons.forEach(icon => {
     icon.addEventListener("click", function () {

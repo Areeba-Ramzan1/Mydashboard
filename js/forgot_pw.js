@@ -9,12 +9,12 @@ const firebaseConfig = {
   measurementId: "G-GQL8J6G3NZ"
 };
 
-// Init
+// Init :
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 const auth = firebase.auth();
-auth.useDeviceLanguage(); // email language = user's device language
+auth.useDeviceLanguage(); 
 
 // =================== Helpers ===================
 function isValidEmail(email) {
@@ -58,20 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // ---------- SIMPLE: default Firebase reset page ----------
       await auth.sendPasswordResetEmail(email);
 
-      // ---------- OPTIONAL (advanced): custom redirect ----------
-      // const actionCodeSettings = {
-      //   url: "https://your-project.vercel.app/index.html", // after reset, continue here
-      //   handleCodeInApp: false
-      // };
-      // await auth.sendPasswordResetEmail(email, actionCodeSettings);
-
       alert("✅ Reset link sent! Please check your email inbox (and spam).");
       emailInput.value = "";
     } catch (err) {
       const msg = mapFirebaseError(err.code, err.message);
       alert("❌ " + msg);
     } finally {
-      // reset UI
+      // reset UI :
       sendBtn.disabled = false;
       sendBtn.style.opacity = "1";
       sendBtn.querySelector(".btn-text").textContent = original;
