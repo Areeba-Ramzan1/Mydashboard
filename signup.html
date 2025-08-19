@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sign Up Page</title>
-  <link rel="stylesheet" href="css/signup.css">
+  <link rel="stylesheet" href="./css/signup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 </head>
@@ -15,15 +15,15 @@
       <p class="subtext">Sign up to Dashboard</p>
       
       <div class="input-wrapper">
-        <input type="text" class="input-box" placeholder="Full Name">
+        <input type="text" class="input-box" placeholder="Full Name" autocomplete="off">
       </div>
       
       <div class="input-wrapper">
-        <input type="email" class="input-box" placeholder="Email">
+        <input type="email" class="input-box" placeholder="Email"  autocomplete="off">
       </div>
       
       <div class="input-wrapper">
-        <input type="password" class="input-box" placeholder="Password">
+        <input type="password" class="input-box" placeholder="Password" autocomplete="new-password">
         <i class="fa-solid fa-eye icon inside-input togglePassword"></i>
       </div>
       
@@ -43,7 +43,7 @@
     
     <div class="image-box">
       <div class="image-card">
-        <img src="images/signup.jpg" alt="signup Illustration" />
+        <img src="./images/signup.jpg" alt="signup Illustration" />
       </div>
     </div>
   </div>
@@ -54,6 +54,6 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 
   <!-- Signup Logic -->
-  <script src="js/signup.js"></script>
+  <script src="./js/signup.js"></script>
 </body>
 </html>

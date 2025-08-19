@@ -71,6 +71,10 @@ body {
   color: white;
 }
 
+.btn.blue:hover {
+  background: #0050cc;
+}
+
 .btn.white {
   background: white;
   color: #333;

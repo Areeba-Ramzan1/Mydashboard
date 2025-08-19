@@ -69,8 +69,8 @@ async function signup() {
     showPopup("🎉 Congratulations Signup successful!...");
 
     setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 2000);
+      window.location.href = "index.html";
+    }, 1000);
 
   } catch (error) {
     showPopup(error.message || "Signup failed. Please try again.");
@@ -91,7 +91,7 @@ async function googleSignIn() {
       lastLogin: firebase.firestore.FieldValue.serverTimestamp(),
     }, { merge: true });
 
-    window.location.href = "dashboard.html";
+    window.location.href = "index.html";
   } catch (error) {
     showPopup(error.message || "Google Sign-In failed.");
   }

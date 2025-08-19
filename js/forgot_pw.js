@@ -1,4 +1,4 @@
-// Firebase Config
+// =================== Firebase Config (yahi use karo) ===================
 const firebaseConfig = {
   apiKey: "AIzaSyDRhnIrgmGwgvpfBt9_RIsZjGedjJYMnpM",
   authDomain: "mydashboard-d6693.firebaseapp.com",
@@ -9,42 +9,72 @@ const firebaseConfig = {
   measurementId: "G-GQL8J6G3NZ"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-// Firebase auth reference (compat)
+// Init
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 const auth = firebase.auth();
+auth.useDeviceLanguage(); // email language = user's device language
 
-// Email validation
+// =================== Helpers ===================
 function isValidEmail(email) {
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function mapFirebaseError(code, fallback) {
+  switch (code) {
+    case "auth/invalid-email": return "Invalid email address.";
+    case "auth/user-not-found": return "No user found with this email.";
+    case "auth/network-request-failed": return "Network error. Check your connection.";
+    case "auth/too-many-requests": return "Too many attempts. Please try again later.";
+    default: return fallback || "Something went wrong. Please try again.";
+  }
+}
+
+// =================== Main ===================
 document.addEventListener("DOMContentLoaded", () => {
   const sendBtn = document.querySelector(".btn.blue");
-  sendBtn.addEventListener("click", sendResetLink);
-});
-
-async function sendResetLink() {
   const emailInput = document.getElementById("forgotEmail");
-  let email = emailInput.value.trim();
 
-  if (!email) {
-    alert("Please enter your email.");
-    return;
-  }
+  sendBtn.addEventListener("click", async () => {
+    const email = (emailInput.value || "").trim();
 
-  if (!isValidEmail(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
+    if (!email) {
+      alert("Please enter your email.");
+      return;
+    }
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-  try {
-    await auth.sendPasswordResetEmail(email);
-    alert("✅ Reset link sent! Please check your email.");
-    emailInput.value = "";
-  } catch (error) {
-    alert(error.message || "Something went wrong. Please try again.");
-  }
-}
+    // UI: loading
+    sendBtn.disabled = true;
+    const original = sendBtn.querySelector(".btn-text").textContent;
+    sendBtn.style.opacity = "0.7";
+    sendBtn.querySelector(".btn-text").textContent = "Sending...";
+
+    try {
+      // ---------- SIMPLE: default Firebase reset page ----------
+      await auth.sendPasswordResetEmail(email);
+
+      // ---------- OPTIONAL (advanced): custom redirect ----------
+      // const actionCodeSettings = {
+      //   url: "https://your-project.vercel.app/index.html", // after reset, continue here
+      //   handleCodeInApp: false
+      // };
+      // await auth.sendPasswordResetEmail(email, actionCodeSettings);
+
+      alert("✅ Reset link sent! Please check your email inbox (and spam).");
+      emailInput.value = "";
+    } catch (err) {
+      const msg = mapFirebaseError(err.code, err.message);
+      alert("❌ " + msg);
+    } finally {
+      // reset UI
+      sendBtn.disabled = false;
+      sendBtn.style.opacity = "1";
+      sendBtn.querySelector(".btn-text").textContent = original;
+    }
+  });
+});

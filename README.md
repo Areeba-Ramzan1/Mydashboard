@@ -1,101 +1,122 @@
-# 🧭 Dashboard – User Authentication Screens
+# 🧭 MyDashboard – User Authentication Screens
 
-This is a responsive,modern dashboard with the following screens:
+A **modern, responsive authentication dashboard** with clean UI and smooth UX.
 
-- 🔓 Login (index.html)
-- 📝 Signup
-- 🔑 Forgot Password
-- 🛠️ Change Password
-- 🧭 Dashboard (after login)
-- ⚙️ Profile Settings (profile_set.html)
+> 📌 **Task 2 – Internship at Krytix Solutions**
 
 ---
 
-📌 ***This is Task 2 of the internship at Krytix Solutions.***
+## 🌐 Live Demo & Repo
 
-## 🛠️ Technologies Used
-- HTML
-- CSS
-- JavaScript
+* 🚀 **Live (Vercel):** [https://mydashboard-beta.vercel.app](https://mydashboard-beta.vercel.app)
+* 📂 **GitHub:** [https://github.com/Areeba-Ramzan1/Mydashboard](https://github.com/Areeba-Ramzan1/Mydashboard)
 
+---
 
-## 🌐 Live Demo
+## 🛠️ Tech Stack
 
-👉 [Click Here to View the Deployed Site](mydashboard-57soahqkw-areebas-projects-509f19a9.vercel.app)
+* **HTML5** – Structure
+* **CSS3** – Styling (Responsive, modern UI)
+* **JavaScript (ES6)** – Client-side logic
+* **Firebase Auth (Email/Password, Password Reset)**
+
+---
+
+## 🔑 Screens Included
+
+* 🔓 **Login** (`index.html`)
+* 📝 **Signup** (`signup.html`)
+* 🔑 **Forgot Password** (`forgot_pw.html`)
+* 🛠️ **Change Password** (`change_pw.html`)
+* 🧭 **Dashboard** (post-login) (`dashboard.html`)
+* ⚙️ **Profile Settings** (`profile_set.html`)
 
 ---
 
 ## 📁 Project Structure
 
-dashboard/# Root folder of project
+```
+dashboard/                # Root Project Folder
 │
-
-├── css/ # All CSS stylesheets
-│ ├── styles.css # CSS for Login/Index page
-│ ├── signup.css # CSS for Signup page
-│ ├── forgot_pw.css # CSS for Forgot password page
-│ ├── change_pw.css # CSS for Change password page
-│ ├── dashboard.css # CSS for Dashboard page
-│ └── profile.css # CSS for Profile settings page
+├── css/                  # All CSS Stylesheets
+│   ├── styles.css        # Login/Index Page
+│   ├── signup.css        # Signup Page
+│   ├── forgot_pw.css     # Forgot Password Page
+│   ├── change_pw.css     # Change Password Page
+│   ├── dashboard.css     # Dashboard Page
+│   └── profile.css       # Profile Settings Page
 │
-
-├── js/ # All JavaScript files
-│ ├── script.js         # JS for Login/Index page
-│ ├── dashboard.js      # JS for Dashboard page
-│ ├── change_pw.js      # JS for Change password page
-│ ├── profile_set.js    # JS for Profile settings page
-│ ├── signup.js         # JS for Signup page
-│ └── forgot_pw.js      # JS for Forgot password page
+├── js/                   # All JavaScript Files
+│   ├── script.js         # Login/Index Page
+│   ├── signup.js         # Signup Page
+│   ├── forgot_pw.js      # Forgot Password Page
+│   ├── change_pw.js      # Change Password Page
+│   ├── dashboard.js      # Dashboard Page
+│   └── profile_set.js    # Profile Settings Page
 │
-
-├── images/             # Images used in the project
-│ └── db.jpg            # Image used in dashboard page
-│ ├── forgot.jpg        # Image used in forgot page
-│ ├── login.jpg         # Image used in login/index page
-│ ├── reset.jpg         # Image used in reset password page
-│ └── signup.jpg        # Image used in signup page
-│ └── profile.jpg       # Image used in profile page
+├── images/               # Images Used in the Project
+│   ├── db.jpg            # Dashboard Background
+│   ├── forgot.jpg        # Forgot Password Page
+│   ├── login.jpg         # Login Page
+│   ├── reset.jpg         # Reset Password Page
+│   ├── signup.jpg        # Signup Page
+│   └── profile.jpg       # Profile Page
 │
+├── index.html            # Login Page
+├── signup.html           # Signup Page
+├── forgot_pw.html        # Forgot Password Page
+├── change_pw.html        # Change Password Page
+├── dashboard.html        # Dashboard (post-login)
+└── profile_set.html      # Profile Settings Page
+└── vercel.json           # for deploy
 
-├── index.html             # Login Page
-├── signup.html            # Sign up Page
-├── forgot_pw.html         # Forgot Password Page
-├── change_pw.html         # Change Password Page
-├── dashboard.html         # Dashboard (post-login)
-├── profile_set.html       # Profile Settings Page
+```
 
 ---
 
-## 🚀 Deployment Info
+## 🔐 Authentication Flow
 
-- ***Hosted on Vercel***
-- ***Repo:*** [GitHub - Dashboard](https://github.com/Areeba-Ramzan1/Mydashboard)
-- ***Live Link:*** [View Website](mydashboard-57soahqkw-areebas-projects-509f19a9.vercel.app)
+1. User **signs up** → new account created
+2. User **logs in** → session is initiated
+3. **Forgot password** → reset email sent via Firebase
+4. **Change password** → secure update for logged-in users
+5. **Profile update** → users can manage their personal info
+
+> **Email templates:** Firebase Console → Authentication → Templates.
+> Set **Sender name** to `MyDashboard` and **Reply-to** to `aribar749@gmail.com`.
 
 ---
 
-## Authentication Flow
-User signs up → Authentication system creates account
-User logs in → Session is created and managed automatically
-Password reset option allows user to recover access
-User can change password securely
-User updates profile information anytime
+## ▶️ Run Locally
+
+**Option A: Open directly**
+
+* Double-click `index.html` (works for static pages).
+
+**Option B: VS Code – Live Server**
+
+1. Install the **Live Server** extension.
+2. Right-click `index.html` → **Open with Live Server**.
+3. Local URL will be like: `http://127.0.0.1:5500/`.
+```
+
+## 🧪 Test Credentials
+
+* 📧 Email: `test@example.com`
+* 🔑 Password: `Password@123`
+
+> Note: These are demo credentials for UI walkthrough only.
 
 
-## Test
-Use:
-Email: test@example.com  
-Password: Password@123
+## 👩‍💻 Developer
 
-
-## 👩‍💻 Developed by
-
-***Areeba Ramzan***  
-📌 Frontend Project for Web Development  
-🔗 [GitHub Profile](https://github.com/Areeba-Ramzan1)
+**Areeba Ramzan**
+Frontend Developer – Internship Project
+GitHub: [https://github.com/Areeba-Ramzan1]
 
 ---
 
 ## 📝 Notes
 
-- This is a ***frontend-only*** project.
+* **Frontend-only** project; ready to swap Firebase with an **external auth API** later if required (same UI, just replace API calls).
+* Responsive layouts validated on desktop & mobile.
